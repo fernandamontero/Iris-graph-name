@@ -7,4 +7,9 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+
+iris_graph <- ggplot(iris, aes(x = Petal.Length, y = Petal.Width)) +
+                       geom_point(aes(color = Species))
+            
+
 ```
