@@ -7,9 +7,11 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
 
 iris_graph <- ggplot(iris, aes(x = Petal.Length, y = Petal.Width)) +
-                       geom_point(aes(color = Species))
+  geom_point(aes(color = Species)) +
+  theme_classic() + labs(x = "Petal Length Test Label", y = "Petal Width Example Label") + facet_wrap(~Species)
             
-
+iris_graph
 ```
